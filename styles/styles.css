@@ -88,7 +88,8 @@
 body {
   display: none;
   margin: 0;
-  background-color: var(--background-color);
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #003369 0%, #0066CC 60%, #0099CC 100%);
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
