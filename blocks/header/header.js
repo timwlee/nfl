@@ -52,6 +52,24 @@ function focusNavSection() {
 }
 
 /**
+ * Open link in a new tab (safe for cross-origin targets).
+ * @param {HTMLElement} anchor
+ */
+function openNavLinkInNewTab(anchor) {
+  const rawHref = anchor.getAttribute('href');
+  const href = rawHref ? rawHref.trim() : '';
+  if (!href || href === '#' || href.startsWith('javascript:')) return;
+  if (href.startsWith('mailto:') || href.startsWith('tel:')) return;
+  anchor.setAttribute('target', '_blank');
+  const rawRel = anchor.getAttribute('rel');
+  const relStr = rawRel ? rawRel.trim() : '';
+  const tokens = new Set(relStr ? relStr.split(/\s+/).filter(Boolean) : []);
+  tokens.add('noopener');
+  tokens.add('noreferrer');
+  anchor.setAttribute('rel', [...tokens].join(' '));
+}
+
+/**
  * Toggles all nav sections
  * @param {Element} sections The container element
  * @param {Boolean} expanded Whether the element should be expanded or collapsed
@@ -144,6 +162,8 @@ export default async function decorate(block) {
         }
       });
     });
+
+    navSections.querySelectorAll('a[href]').forEach(openNavLinkInNewTab);
   }
 
   // hamburger for mobile
