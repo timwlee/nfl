@@ -1,21 +1,33 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
 export default function decorate(block) {
-  /* change to ul, li */
-  const ul = document.createElement('ul');
-  [...block.children].forEach((row) => {
-    const li = document.createElement('li');
-    while (row.firstElementChild) li.append(row.firstElementChild);
-    [...li.children].forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-swatch-card-image';
-      else div.className = 'cards-swatch-card-body';
-    });
-    ul.append(li);
+  const rows = [...block.querySelectorAll(':scope > div')];
+
+  rows.forEach((row) => {
+    const cols = [...row.querySelectorAll(':scope > div')];
+    if (cols.length < 2) return;
+
+    const name = cols[0].textContent.trim();
+    const hex = cols[1].textContent.trim();
+
+    // Build swatch card
+    row.innerHTML = '';
+    row.classList.add('swatch-card');
+
+    const swatchEl = document.createElement('div');
+    swatchEl.classList.add('swatch-color');
+    swatchEl.style.background = hex;
+
+    const infoEl = document.createElement('div');
+    infoEl.classList.add('swatch-info');
+
+    const nameEl = document.createElement('span');
+    nameEl.classList.add('swatch-name');
+    nameEl.textContent = name;
+
+    const hexEl = document.createElement('small');
+    hexEl.classList.add('swatch-hex');
+    hexEl.textContent = hex;
+
+    infoEl.append(nameEl, hexEl);
+    row.append(swatchEl, infoEl);
   });
-  ul.querySelectorAll('picture > img').forEach((img) => {
-    const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
-    img.closest('picture').replaceWith(optimizedPic);
-  });
-  block.textContent = '';
-  block.append(ul);
 }
