@@ -37,10 +37,7 @@
   },
   {
     "id": "cards-gallery-item",
-    "components": [
-      "image",
-      "text"
-    ]
+    "components": []
   },
   {
     "id": "cards-swatch",
