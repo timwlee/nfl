@@ -177,20 +177,20 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
+        "name": "thumbnail",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
+        "name": "thumbnailAlt",
         "label": "Image Alt",
         "multi": false
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "caption",
         "value": "",
         "label": "Caption",
         "valueType": "string"
