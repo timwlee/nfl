@@ -48,12 +48,6 @@
     ]
   },
   {
-    "id": "columns-specimen",
-    "components": [
-      "columns-row"
-    ]
-  },
-  {
     "id": "columns-row",
     "components": []
   },
