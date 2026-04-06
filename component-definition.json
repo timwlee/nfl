@@ -99,7 +99,7 @@
         {
           "title": "Cards Gallery",
           "id": "cards-gallery",
-          "model": "cards",
+          "model": "cards-gallery",
           "filter": "cards-gallery",
           "plugins": {
             "da": {
