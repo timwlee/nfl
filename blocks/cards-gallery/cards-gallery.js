@@ -1,6 +1,9 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
+  // Skip DOM manipulation in Universal Editor to preserve instrumentation
+  if (document.documentElement.classList.contains('adobe-ue-edit')) return;
+
   /* change to ul, li */
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
