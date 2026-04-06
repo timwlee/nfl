@@ -119,9 +119,9 @@
               "rows": 1,
               "columns": 2,
               "fields": [
-                { "name": "image", "selector": "div:nth-child(1)>picture>img[src]" },
-                { "name": "imageAlt", "selector": "div:nth-child(1)>picture>img[alt]" },
-                { "name": "text", "selector": "div:nth-child(2)" }
+                { "name": "galleryImage", "selector": "div:nth-child(1)>picture>img[src]" },
+                { "name": "galleryImageAlt", "selector": "div:nth-child(1)>picture>img[alt]" },
+                { "name": "galleryText", "selector": "div:nth-child(2)" }
               ]
             }
           }
