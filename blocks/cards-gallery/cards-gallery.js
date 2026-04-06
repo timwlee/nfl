@@ -1,13 +1,26 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
-export default function decorate(block) {
-  // Skip DOM manipulation in Universal Editor to preserve instrumentation
-  if (document.documentElement.classList.contains('adobe-ue-edit')) return;
+/**
+ * Moves all data-aue-* instrumentation attributes from one element to another.
+ * Required so Universal Editor keeps track of components after DOM restructuring.
+ * @param {Element} from - source element
+ * @param {Element} to - target element
+ */
+function moveInstrumentation(from, to) {
+  [...from.attributes].forEach((attr) => {
+    if (attr.name.startsWith('data-aue-') || attr.name.startsWith('data-richtext-')) {
+      to.setAttribute(attr.name, attr.value);
+      from.removeAttribute(attr.name);
+    }
+  });
+}
 
-  /* change to ul, li */
+export default function decorate(block) {
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
+    // Move UE instrumentation from the row div to the new li
+    moveInstrumentation(row, li);
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-gallery-card-image';
