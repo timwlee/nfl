@@ -26,11 +26,11 @@
               "fields": [
                 {
                   "name": "image",
-                  "selector": "img[src]"
+                  "selector": "picture > img[src]"
                 },
                 {
                   "name": "imageAlt",
-                  "selector": "img[alt]"
+                  "selector": "picture > img[alt]"
                 }
               ]
             }
@@ -60,41 +60,6 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion",
-          "id": "accordion",
-          "model": "accordion",
-          "filter": "accordion",
-          "plugins": {
-            "da": {
-              "name": "accordion",
-              "rows": 1,
-              "columns": 2
-            }
-          }
-        },
-        {
-          "title": "Accordion Item",
-          "id": "accordion-item",
-          "model": "accordion-item",
-          "plugins": {
-            "da": {
-              "name": "accordion-item",
-              "rows": 2,
-              "columns": 0,
-              "fields": [
-                {
-                  "name": "summary",
-                  "selector": "div:nth-child(1)"
-                },
-                {
-                  "name": "text",
-                  "selector": "div:nth-child(2)"
-                }
-              ]
-            }
-          }
-        },
-        {
           "title": "Cards",
           "id": "cards",
           "model": "cards",
@@ -117,11 +82,11 @@
               "fields": [
                 {
                   "name": "image",
-                  "selector": "div:nth-child(1)>picture>img[src]"
+                  "selector": "div:nth-child(1) > picture > img[src]"
                 },
                 {
                   "name": "imageAlt",
-                  "selector": "div:nth-child(1)>picture>img[alt]"
+                  "selector": "div:nth-child(1) > picture > img[alt]"
                 },
                 {
                   "name": "text",
@@ -132,36 +97,47 @@
           }
         },
         {
-          "title": "Carousel",
-          "id": "carousel",
-          "model": "carousel",
-          "filter": "carousel",
+          "title": "Cards Gallery",
+          "id": "cards-gallery",
+          "model": "cards",
+          "filter": "cards-gallery",
           "plugins": {
             "da": {
+              "name": "cards-gallery",
               "rows": 1,
-              "columns": 1
+              "columns": 2
             }
           }
         },
         {
-          "title": "Carousel Slide",
-          "id": "carousel-item",
-          "model": "carousel-item",
+          "title": "Cards Swatch",
+          "id": "cards-swatch",
+          "model": "cards-swatch",
+          "filter": "cards-swatch",
           "plugins": {
             "da": {
+              "name": "cards-swatch",
               "rows": 1,
-              "columns": 1,
+              "columns": 2
+            }
+          }
+        },
+        {
+          "title": "Swatch",
+          "id": "cards-swatch-item",
+          "model": "cards-swatch-item",
+          "plugins": {
+            "da": {
+              "name": "cards-swatch-item",
+              "rows": 1,
+              "columns": 2,
               "fields": [
                 {
-                  "name": "backgroundImage",
-                  "selector": "div:nth-child(1)>picture>img[src]"
+                  "name": "name",
+                  "selector": "div:nth-child(1)"
                 },
                 {
-                  "name": "backgroundImageAlt",
-                  "selector": "div:nth-child(1)>picture>img[alt]"
-                },
-                {
-                  "name": "text",
+                  "name": "hex",
                   "selector": "div:nth-child(2)"
                 }
               ]
@@ -207,6 +183,41 @@
           }
         },
         {
+          "title": "Columns Specimen",
+          "id": "columns-specimen",
+          "model": "columns-specimen",
+          "filter": "columns-specimen",
+          "plugins": {
+            "da": {
+              "name": "columns-specimen",
+              "rows": 1,
+              "columns": 2,
+              "behaviour": "columns"
+            }
+          }
+        },
+        {
+          "title": "Embed Audio",
+          "id": "embed-audio",
+          "model": "embed-audio",
+          "plugins": {
+            "da": {
+              "name": "embed-audio",
+              "unsafeHTML": "<div class=\"embed-audio\"><div><div><a href=\"\">PLAY THEME</a></div></div></div>",
+              "fields": [
+                {
+                  "name": "audioUrl",
+                  "selector": "div > div > a[href]"
+                },
+                {
+                  "name": "audioUrlText",
+                  "selector": "div > div > a"
+                }
+              ]
+            }
+          }
+        },
+        {
           "title": "Fragment",
           "id": "fragment",
           "model": "fragment",
@@ -216,13 +227,35 @@
               "fields": [
                 {
                   "name": "url",
-                  "selector": "div>div>p>a[href]"
+                  "selector": "div > div > p > a[href]"
                 },
                 {
                   "name": "urlText",
-                  "selector": "div>div>p>a"
+                  "selector": "div > div > p > a"
                 }
               ]
+            }
+          }
+        },
+        {
+          "title": "Footer",
+          "id": "footer",
+          "model": "footer",
+          "plugins": {
+            "da": {
+              "name": "footer",
+              "unsafeHTML": "<div class=\"footer\"></div>"
+            }
+          }
+        },
+        {
+          "title": "Header",
+          "id": "header",
+          "model": "header",
+          "plugins": {
+            "da": {
+              "name": "header",
+              "unsafeHTML": "<div class=\"header\"></div>"
             }
           }
         },
@@ -232,141 +265,49 @@
           "model": "hero",
           "plugins": {
             "da": {
+              "name": "hero",
               "unsafeHTML": "<div class=\"hero\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture><h1></h1></div></div></div>",
               "fields": [
                 {
                   "name": "image",
-                  "selector": "div>div>picture>img[src]"
+                  "selector": "div > div > picture > img[src]"
                 },
                 {
                   "name": "imageAlt",
-                  "selector": "div>div>picture>img[alt]"
+                  "selector": "div > div > picture > img[alt]"
                 },
                 {
                   "name": "text",
-                  "selector": "div>div>h1"
+                  "selector": "div > div > h1"
                 }
               ]
             }
           }
         },
         {
-          "title": "Quote",
-          "id": "quote",
-          "model": "quote",
+          "title": "Video Hero",
+          "id": "video-hero",
+          "model": "video-hero",
           "plugins": {
             "da": {
-              "name": "quote",
-              "rows": 1,
-              "columns": 1,
-              "fields": [
-                {
-                  "name": "quote",
-                  "selector": "div:nth-child(1)>div"
-                },
-                {
-                  "name": "author",
-                  "selector": "div:nth-child(2)>div"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "title": "Search",
-          "id": "search",
-          "model": "search",
-          "plugins": {
-            "da": {
-              "name": "search",
-              "rows": 1,
-              "columns": 1,
-              "fields": [
-                {
-                  "name": "searchUrl",
-                  "selector": "div>div>p>a[href]"
-                },
-                {
-                  "name": "searchUrlText",
-                  "selector": "div>div>p>a"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "title": "Table",
-          "id": "table",
-          "model": "table",
-          "filter": "table",
-          "plugins": {
-            "da": {
-              "name": "table",
-              "rows": 1,
-              "columns": 1,
-              "fields": [
-                {
-                  "name": "table",
-                  "selector": "div>div"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "title": "Tabs",
-          "id": "tabs",
-          "model": "tabs",
-          "filter": "tabs",
-          "plugins": {
-            "da": {
-              "columns": 1,
-              "rows": 2
-            }
-          }
-        },
-        {
-          "title": "Tabs Item",
-          "id": "tabs-item",
-          "model": "tabs-item",
-          "plugins": {
-            "da": {
-              "columns": 0,
-              "rows": 2,
-              "fields": [
-                {
-                  "name": "name",
-                  "selector": "div:nth-child(1)"
-                },
-                {
-                  "name": "content",
-                  "selector": "div:nth-child(2)"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "title": "Video",
-          "id": "video",
-          "model": "video",
-          "plugins": {
-            "da": {
-              "name": "video",
-              "rows": 1,
-              "columns": 1,
+              "name": "video-hero",
+              "unsafeHTML": "<div class=\"video-hero\"><div><div><a href=\"\">Video</a></div></div></div>",
               "fields": [
                 {
                   "name": "videoUrl",
-                  "selector": "div>div>p>a[href]"
+                  "selector": "div > div > a[href]"
                 },
                 {
                   "name": "videoUrlText",
-                  "selector": "div>div>p>a"
+                  "selector": "div > div > a"
                 },
                 {
                   "name": "posterImage",
-                  "selector": "div>div>picture>img[src]"
+                  "selector": "picture > img[src]"
+                },
+                {
+                  "name": "posterImageAlt",
+                  "selector": "picture > img[alt]"
                 }
               ]
             }

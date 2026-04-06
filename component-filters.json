@@ -8,28 +8,19 @@
   {
     "id": "section",
     "components": [
-      "accordion",
       "cards",
-      "carousel",
+      "cards-gallery",
+      "cards-swatch",
       "columns",
-      "embed",
+      "columns-specimen",
+      "embed-audio",
       "fragment",
-      "form",
+      "footer",
+      "header",
       "hero",
       "image",
-      "quote",
-      "search",
-      "tabs",
-      "table",
       "text",
-      "video",
-      "product-recommendations"
-    ]
-  },
-  {
-    "id": "accordion",
-    "components": [
-      "accordion-item"
+      "video-hero"
     ]
   },
   {
@@ -39,13 +30,25 @@
     ]
   },
   {
-    "id": "carousel",
+    "id": "cards-gallery",
     "components": [
-      "carousel-item"
+      "card"
+    ]
+  },
+  {
+    "id": "cards-swatch",
+    "components": [
+      "cards-swatch-item"
     ]
   },
   {
     "id": "columns",
+    "components": [
+      "columns-row"
+    ]
+  },
+  {
+    "id": "columns-specimen",
     "components": [
       "columns-row"
     ]
@@ -59,25 +62,6 @@
     "components": [
       "text",
       "image"
-    ]
-  },
-  {
-    "id": "table",
-    "rte": {
-      "toolbar": {
-        "insert": [
-          "table"
-        ],
-        "sections": [
-          "insert"
-        ]
-      }
-    }
-  },
-  {
-    "id": "tabs",
-    "components": [
-      "tabs-item"
     ]
   }
 ]

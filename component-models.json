@@ -58,25 +58,12 @@
     ]
   },
   {
-    "id": "accordion-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "summary",
-        "value": "",
-        "label": "Summary",
-        "required": true
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string",
-        "required": true
-      }
-    ]
+    "id": "cards",
+    "fields": []
+  },
+  {
+    "id": "cards-swatch",
+    "fields": []
   },
   {
     "id": "card",
@@ -105,28 +92,32 @@
     ]
   },
   {
-    "id": "carousel-item",
+    "id": "cards-swatch-item",
     "fields": [
       {
-        "component": "reference",
+        "component": "richtext",
         "valueType": "string",
-        "name": "backgroundImage",
-        "label": "Background Image",
-        "multi": false
+        "name": "name",
+        "value": "",
+        "label": "Color name",
+        "required": true
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "backgroundImageAlt",
-        "label": "Background Image Alt"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "label": "Text",
-        "valueType": "string"
+        "name": "hex",
+        "label": "Hex value",
+        "required": true
       }
     ]
+  },
+  {
+    "id": "columns-row",
+    "fields": []
+  },
+  {
+    "id": "columns-cell",
+    "fields": []
   },
   {
     "id": "columns",
@@ -137,6 +128,22 @@
         "name": "columns",
         "label": "Number of Columns",
         "value": 2,
+        "validation": {
+          "numberMin": 1,
+          "numberMax": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "columns-specimen",
+    "fields": [
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "columns",
+        "label": "Number of Columns",
+        "value": 1,
         "validation": {
           "numberMin": 1,
           "numberMax": 6
@@ -159,6 +166,14 @@
         "required": true
       }
     ]
+  },
+  {
+    "id": "footer",
+    "fields": []
+  },
+  {
+    "id": "header",
+    "fields": []
   },
   {
     "id": "hero",
@@ -187,76 +202,12 @@
     ]
   },
   {
-    "id": "quote",
-    "fields": [
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "quote",
-        "label": "Quote",
-        "required": true
-      },
-      {
-        "component": "text",
-        "name": "author",
-        "label": "Author",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "search",
-    "fields": [
-      {
-        "component": "text",
-        "name": "searchUrlText",
-        "label": "Search URL Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "searchUrl",
-        "label": "Search URL",
-        "required": true
-      }
-    ]
-  },
-  {
-    "id": "table",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "table",
-        "value": "",
-        "label": "Table Content"
-      }
-    ]
-  },
-  {
-    "id": "tabs-item",
-    "fields": [
-      {
-        "component": "text",
-        "name": "name",
-        "valueType": "string",
-        "label": "Tab Name"
-      },
-      {
-        "component": "richtext",
-        "name": "content",
-        "label": "Content",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "video",
+    "id": "video-hero",
     "fields": [
       {
         "component": "boolean",
         "name": "classes_autoplay",
-        "label": "Autoplay Video",
+        "label": "Autoplay",
         "valueType": "boolean"
       },
       {
@@ -269,13 +220,37 @@
       {
         "component": "text",
         "name": "videoUrlText",
-        "label": "Video URL Text",
+        "label": "Link label",
         "valueType": "string"
       },
       {
         "component": "reference",
         "name": "posterImage",
-        "label": "Poster Image",
+        "label": "Poster image (optional)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "posterImageAlt",
+        "label": "Poster alt",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "embed-audio",
+    "fields": [
+      {
+        "component": "text",
+        "name": "audioUrl",
+        "label": "Audio URL",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "audioUrlText",
+        "label": "Button label",
         "valueType": "string"
       }
     ]
