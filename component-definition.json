@@ -225,14 +225,16 @@
             "da": {
               "name": "embed-audio",
               "unsafeHTML": "<div class=\"embed-audio\"><div><div><a href=\"\">PLAY THEME</a></div></div></div>",
+              "columns": 1,
+              "rows": 1,
               "fields": [
                 {
                   "name": "audioUrl",
-                  "selector": "div > div > a[href]"
+                  "selector": "div>div>p>a[href]"
                 },
                 {
                   "name": "audioUrlText",
-                  "selector": "div > div > a"
+                  "selector": "div>div>p>a"
                 }
               ]
             }
