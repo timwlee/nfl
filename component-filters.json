@@ -36,6 +36,13 @@
     ]
   },
   {
+    "id": "cards-gallery-item",
+    "components": [
+      "image",
+      "text"
+    ]
+  },
+  {
     "id": "cards-swatch",
     "components": [
       "cards-swatch-item"
