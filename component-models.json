@@ -96,32 +96,6 @@
     ]
   },
   {
-    "id": "cards-gallery-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "thumbnail",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "thumbnailAlt",
-        "label": "Image Alt",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "caption",
-        "value": "",
-        "label": "Caption",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "cards-swatch-item",
     "fields": [
       {

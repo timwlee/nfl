@@ -77,6 +77,7 @@
           "model": "card",
           "plugins": {
             "da": {
+              "name": "card",
               "rows": 1,
               "columns": 2,
               "fields": [
@@ -106,32 +107,6 @@
               "name": "cards-gallery",
               "rows": 1,
               "columns": 2
-            }
-          }
-        },
-        {
-          "title": "Gallery",
-          "id": "cards-gallery-item",
-          "model": "cards-gallery-item",
-          "plugins": {
-            "da": {
-              "name": "cards-gallery-item",
-              "rows": 1,
-              "columns": 2,
-              "fields": [
-                {
-                  "name": "thumbnail",
-                  "selector": "div:nth-child(1) > picture > img[src]"
-                },
-                {
-                  "name": "thumbnailAlt",
-                  "selector": "div:nth-child(1) > picture > img[alt]"
-                },
-                {
-                  "name": "caption",
-                  "selector": "div:nth-child(2)"
-                }
-              ]
             }
           }
         },
