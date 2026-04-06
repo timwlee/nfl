@@ -186,7 +186,6 @@
           "title": "Columns Specimen",
           "id": "columns-specimen",
           "model": "columns-specimen",
-          "filter": "columns-specimen",
           "plugins": {
             "da": {
               "name": "columns-specimen",
