@@ -297,11 +297,11 @@
               "fields": [
                 {
                   "name": "videoUrl",
-                  "selector": "div>div>a[href]"
+                  "selector": "div>div>p>a[href]"
                 },
                 {
                   "name": "videoUrlText",
-                  "selector": "div>div>a"
+                  "selector": "div>div>p>a"
                 }
               ]
             }
