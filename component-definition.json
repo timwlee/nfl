@@ -110,7 +110,7 @@
           }
         },
         {
-          "title": "Gallery",
+          "title": "Gallery Card",
           "id": "cards-gallery-item",
           "model": "cards-gallery-item",
           "plugins": {
@@ -120,12 +120,12 @@
               "columns": 2,
               "fields": [
                 {
-                  "name": "thumbnail",
-                  "selector": "div:nth-child(1) > picture > img[src]"
+                  "name": "image",
+                  "selector": "div:nth-child(1)>picture>img[src]"
                 },
                 {
-                  "name": "thumbnailAlt",
-                  "selector": "div:nth-child(1) > picture > img[alt]"
+                  "name": "imageAlt",
+                  "selector": "div:nth-child(1)>picture>img[alt]"
                 },
                 {
                   "name": "caption",
