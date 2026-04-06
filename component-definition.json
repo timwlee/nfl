@@ -114,6 +114,7 @@
           "title": "Gallery Card",
           "id": "cards-gallery-item",
           "model": "cards-gallery-item",
+          "filter": "cards-gallery-item",
           "plugins": {
             "da": {
               "name": "cards-gallery-item",
@@ -135,7 +136,7 @@
               ]
             }
           }
-        },
+        }
         {
           "title": "Cards Swatch",
           "id": "cards-swatch",
