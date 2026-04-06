@@ -291,14 +291,16 @@
           "plugins": {
             "da": {
               "name": "video-hero",
+              "columns": 1,
+              "rows": 1,
               "fields": [
                 {
                   "name": "videoUrl",
-                  "selector": "div>a[href]"
+                  "selector": "div>div>a[href]"
                 },
                 {
                   "name": "videoUrlText",
-                  "selector": "div>a"
+                  "selector": "div>div>a"
                 }
               ]
             }
