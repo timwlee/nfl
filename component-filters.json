@@ -36,10 +36,6 @@
     ]
   },
   {
-    "id": "cards-gallery-item",
-    "components": []
-  },
-  {
     "id": "cards-swatch",
     "components": [
       "cards-swatch-item"
