@@ -208,8 +208,13 @@
         "component": "text",
         "name": "videoUrl",
         "label": "Video URL",
-        "valueType": "string",
-        "required": true
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "videoUrlText",
+        "label": "Link label",
+        "valueType": "string"
       }
     ]
   },

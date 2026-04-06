@@ -291,11 +291,14 @@
           "plugins": {
             "da": {
               "name": "video-hero",
-              "unsafeHTML": "<div class=\"video-hero\"><div><div><a href=\"\">Video</a></div></div></div>",
               "fields": [
                 {
                   "name": "videoUrl",
                   "selector": "div>a[href]"
+                },
+                {
+                  "name": "videoUrlText",
+                  "selector": "div>a"
                 }
               ]
             }
