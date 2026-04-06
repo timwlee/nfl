@@ -110,7 +110,7 @@
           }
         },
         {
-          "title": "Gallery Card",
+          "title": "Gallery",
           "id": "cards-gallery-item",
           "model": "cards-gallery-item",
           "plugins": {
@@ -120,15 +120,15 @@
               "columns": 2,
               "fields": [
                 {
-                  "name": "image",
-                  "selector": "div:nth-child(1)>picture>img[src]"
+                  "name": "thumbnail",
+                  "selector": "div:nth-child(1) > picture > img[src]"
                 },
                 {
-                  "name": "imageAlt",
-                  "selector": "div:nth-child(1)>picture>img[alt]"
+                  "name": "thumbnailAlt",
+                  "selector": "div:nth-child(1) > picture > img[alt]"
                 },
                 {
-                  "name": "text",
+                  "name": "caption",
                   "selector": "div:nth-child(2)"
                 }
               ]
