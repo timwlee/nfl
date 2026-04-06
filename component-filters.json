@@ -32,7 +32,7 @@
   {
     "id": "cards-gallery",
     "components": [
-      "card"
+      "cards-gallery-item"
     ]
   },
   {
