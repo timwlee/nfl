@@ -190,9 +190,9 @@
       },
       {
         "component": "richtext",
-        "name": "blah",
+        "name": "caption",
         "value": "",
-        "label": "Blah",
+        "label": "Caption",
         "valueType": "string"
       }
     ]
