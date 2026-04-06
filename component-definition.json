@@ -295,19 +295,7 @@
               "fields": [
                 {
                   "name": "videoUrl",
-                  "selector": "div > div > a[href]"
-                },
-                {
-                  "name": "videoUrlText",
-                  "selector": "div > div > a"
-                },
-                {
-                  "name": "posterImage",
-                  "selector": "picture > img[src]"
-                },
-                {
-                  "name": "posterImageAlt",
-                  "selector": "picture > img[alt]"
+                  "selector": "div>a[href]"
                 }
               ]
             }

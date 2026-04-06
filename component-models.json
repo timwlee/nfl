@@ -205,35 +205,11 @@
     "id": "video-hero",
     "fields": [
       {
-        "component": "boolean",
-        "name": "classes_autoplay",
-        "label": "Autoplay",
-        "valueType": "boolean"
-      },
-      {
         "component": "text",
         "name": "videoUrl",
         "label": "Video URL",
         "valueType": "string",
         "required": true
-      },
-      {
-        "component": "text",
-        "name": "videoUrlText",
-        "label": "Link label",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "posterImage",
-        "label": "Poster image (optional)",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "posterImageAlt",
-        "label": "Poster alt",
-        "valueType": "string"
       }
     ]
   },
