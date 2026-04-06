@@ -66,6 +66,10 @@
     "fields": []
   },
   {
+    "id": "cards-gallery",
+    "fields": []
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -168,7 +172,7 @@
     "fields": []
   },
   {
-    "id": "gallery-card",
+    "id": "cards-gallery-item",
     "fields": [
       {
         "component": "reference",
@@ -188,7 +192,7 @@
         "component": "richtext",
         "name": "text",
         "value": "",
-        "label": "Text",
+        "label": "Caption",
         "valueType": "string"
       }
     ]

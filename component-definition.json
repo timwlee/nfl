@@ -110,11 +110,12 @@
           }
         },
         {
-          "title": "Gallery Card",
-          "id": "gallery-card",
-          "model": "gallery-card",
+          "title": "Gallery item",
+          "id": "cards-gallery-item",
+          "model": "cards-gallery-item",
           "plugins": {
             "da": {
+              "name": "cards-gallery-item",
               "rows": 1,
               "columns": 2,
               "fields": [
@@ -134,7 +135,6 @@
             }
           }
         },
-
         {
           "title": "Cards Swatch",
           "id": "cards-swatch",
@@ -164,7 +164,7 @@
                 },
                 {
                   "name": "hex",
-                  "selector": "div:nth-child(2)>p"
+                  "selector": "div:nth-child(2)"
                 }
               ]
             }
