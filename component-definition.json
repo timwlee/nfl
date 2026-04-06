@@ -191,8 +191,13 @@
             "da": {
               "name": "columns-specimen",
               "rows": 1,
-              "columns": 2,
-              "behaviour": "columns"
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "description",
+                  "selector": "div>div"
+                }
+              ]
             }
           }
         },
