@@ -53,6 +53,7 @@
 
 .cards-gallery > ul > li:not(:has(picture)) .cards-gallery-card-body {
   position: static;
+  padding: 0;
   background: none;
   text-align: center;
 }
