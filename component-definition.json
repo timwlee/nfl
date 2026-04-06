@@ -110,6 +110,32 @@
           }
         },
         {
+          "title": "Gallery Card",
+          "id": "gallery-card",
+          "model": "gallery-card",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 2,
+              "fields": [
+                {
+                  "name": "image",
+                  "selector": "div:nth-child(1) > picture > img[src]"
+                },
+                {
+                  "name": "imageAlt",
+                  "selector": "div:nth-child(1) > picture > img[alt]"
+                },
+                {
+                  "name": "text",
+                  "selector": "div:nth-child(2)"
+                }
+              ]
+            }
+          }
+        },
+
+        {
           "title": "Cards Swatch",
           "id": "cards-swatch",
           "model": "cards-swatch",
